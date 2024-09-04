@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Membership</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gym Membership</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Membership</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Join Our Gym</h2>
+            <form action="{{ url_for('submit') }}" method="POST">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone_number">Phone Number</label>
+                <input type="tel" id="phone_number" name="phone_number" required>
+
+                <label for="membership_plan">Choose a Plan</label>
+                <select id="membership_plan" name="membership_plan" required>
+                    <option value="monthly">Monthly - R 280</option>
+                    <option value="quarterly">Quarterly - R 700</option>
+                    <option value="yearly">Yearly - R 2000</option>
+                </select>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gym Membership. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
